@@ -94,7 +94,7 @@ const CTASection = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: 0.6 }}
-                className="flex flex-col items-center gap-5"
+                className="flex flex-col items-center gap-3"
               >
                 <a 
                   href="/book-call"
@@ -103,12 +103,9 @@ const CTASection = () => {
                   <span>Book a 15-Minute Pipeline Call</span>
                   <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                 </a>
-                <a
-                  href="#"
-                  className="text-muted-foreground hover:text-electric transition-colors duration-300 underline underline-offset-4 decoration-muted-foreground/30 hover:decoration-electric"
-                >
-                  Or See a Sample Campaign First
-                </a>
+                <p className="text-sm text-muted-foreground">
+                  Get a realistic demo target and pipeline plan in 15 minutes
+                </p>
               </motion.div>
             </div>
           </div>

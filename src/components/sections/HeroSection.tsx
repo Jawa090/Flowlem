@@ -71,7 +71,7 @@ const HeroSection = () => {
               transition={{ duration: 0.6 }}
               className="text-lg sm:text-xl text-muted-foreground leading-relaxed max-w-xl"
             >
-              Flowlem replaces SDR prospecting for B2B agencies that sell to SaaS and startups by detecting in‑market buyers, scoring prospects, and booking qualified demos automatically.
+              We replace SDR guesswork for B2B agencies selling to SaaS companies—detecting in-market buyers, scoring prospects, and booking qualified demos on autopilot.
             </motion.p>
 
             <motion.div

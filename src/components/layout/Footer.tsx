@@ -1,4 +1,4 @@
-import { Zap } from "lucide-react";
+import { Zap, Mail, MessageCircle } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -20,6 +20,29 @@ const Footer = () => {
           {/* Description */}
           <p className="text-lg text-muted-foreground leading-relaxed mb-8 max-w-lg mx-auto">
             AI-powered lead generation that books SaaS demos for B2B agencies on autopilot.
+          </p>
+
+          {/* Contact Information */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-8 pb-8 border-b border-border/50">
+            <a 
+              href="mailto:hello@flowlem.com" 
+              className="flex items-center gap-2 text-muted-foreground hover:text-electric transition-colors duration-300"
+            >
+              <Mail className="w-5 h-5" />
+              <span>hello@flowlem.com</span>
+            </a>
+            <a 
+              href="/book-call" 
+              className="flex items-center gap-2 text-muted-foreground hover:text-electric transition-colors duration-300"
+            >
+              <MessageCircle className="w-5 h-5" />
+              <span>Schedule a Call</span>
+            </a>
+          </div>
+
+          {/* Privacy & Security Note */}
+          <p className="text-sm text-muted-foreground/70 mb-4">
+            Your data is secure. We never share prospect information with third parties.
           </p>
           
           {/* Copyright */}

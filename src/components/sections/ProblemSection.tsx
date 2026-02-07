@@ -7,7 +7,7 @@ const problems = [
   {
     icon: Users,
     title: "SDRs guessing, not qualifying",
-    description: "Hours spent guessing who to contact instead of talking to real buyers.",
+    description: "SDRs often guess which leads are ready to buy, wasting time and missing connections.",
     stat: "67%",
     statLabel: "of SDR time wasted",
   },

@@ -7,7 +7,7 @@ const deliverables = [
   {
     icon: Target,
     title: "Custom ICP & Market Intelligence",
-    description: "Detailed profile of your ideal SaaS customers with funding triggers, growth signals, and buying intent indicators specific to your niche.",
+    description: "We build your AI-powered pipeline and share all outreach sequences and templates used.",
     features: ["Funding round tracking", "Growth signal detection", "Intent scoring", "Market timing analysis"],
     value: "Worth $5,000+",
   },
@@ -28,7 +28,7 @@ const deliverables = [
   {
     icon: Calendar,
     title: "Qualified Demo Bookings",
-    description: "Guaranteed number of qualified demos per month with pre-screened prospects who have budget, authority, and genuine interest.",
+    description: "You regain your time while we deliver a steady flow of qualified demos.",
     features: ["Budget qualification", "Authority verification", "Interest validation", "Calendar integration"],
     value: "Priceless",
     highlight: true,

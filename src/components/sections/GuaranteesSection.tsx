@@ -7,14 +7,14 @@ const guarantees = [
   {
     icon: Target,
     title: "Quality Guarantee",
-    description: "Every demo we book must match your exact ICP criteria and budget requirements. If it doesn't fit, we replace it at no cost—and we'll refine our targeting to prevent future mismatches.",
+    description: "We guarantee a minimum number of high-quality demos and show-ups—or we work free until we deliver.",
     features: ["ICP-matched prospects only", "Budget pre-qualification", "Free replacements", "Continuous optimization"],
     badge: "100% Quality",
   },
   {
     icon: Shield,
     title: "Show-Up Guarantee", 
-    description: "No-shows happen, but they shouldn't cost you opportunities. We replace every no-show with a new qualified demo booking, ensuring your calendar stays full of real prospects.",
+    description: "We manage all follow-ups and rescheduling so you can focus on closing.",
     features: ["No-show replacements", "Calendar protection", "Prospect confirmation", "Backup scheduling"],
     badge: "Risk-Free",
   },
