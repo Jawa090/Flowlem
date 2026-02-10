@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Sparkles, TrendingUp, Calendar } from "lucide-react";
-import heroImage from "@/assets/hero-illustration.png";
+import { ArrowRight, Sparkles } from "lucide-react";
+import { useState, useEffect } from "react";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
@@ -21,6 +21,17 @@ const staggerContainer = {
 };
 
 const HeroSection = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const images = ["/1.jpeg", "/2.jpeg", "/3.jpeg"];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % images.length);
+    }, 3000); // Change slide every 3 seconds
+
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden section-mesh pt-16">
       {/* Animated background elements */}
@@ -42,10 +53,10 @@ const HeroSection = () => {
       </div>
 
       <div className="container-custom relative z-10 py-8 lg:py-12">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+        <div className="grid lg:grid-cols-5 gap-8 lg:gap-12 items-center">
           {/* Left Column - Content */}
           <motion.div 
-            className="space-y-8"
+            className="space-y-8 lg:col-span-2"
             variants={staggerContainer}
             initial="initial"
             animate="animate"
@@ -114,15 +125,15 @@ const HeroSection = () => {
             </motion.div>
           </motion.div>
 
-          {/* Right Column - Visual */}
+          {/* Right Column - Image Slider */}
           <motion.div
             variants={fadeInRight}
             initial="initial"
             animate="animate"
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative -mt-16 lg:-mt-20"
+            className="relative -mt-16 lg:-mt-20 lg:col-span-3"
           >
-            {/* Main image container */}
+            {/* Slider container */}
             <div className="relative">
               <motion.div 
                 className="relative rounded-3xl overflow-hidden shadow-2xl border border-border/50"
@@ -130,14 +141,43 @@ const HeroSection = () => {
                 transition={{ duration: 0.4 }}
               >
                 <div className="absolute inset-0 bg-gradient-to-tr from-electric/10 via-transparent to-transparent z-10 pointer-events-none" />
-                <img
-                  src={heroImage}
-                  alt="AI-powered lead generation pipeline visualization"
-                  className="w-full h-auto"
-                />
+                
+                {/* Images */}
+                <div className="relative aspect-[16/10] w-full">
+                  {images.map((img, index) => (
+                    <motion.img
+                      key={index}
+                      src={img}
+                      alt={`Slide ${index + 1}`}
+                      className="absolute inset-0 w-full h-full object-contain bg-background"
+                      initial={{ opacity: 0 }}
+                      animate={{ 
+                        opacity: currentSlide === index ? 1 : 0,
+                        scale: currentSlide === index ? 1 : 1.05
+                      }}
+                      transition={{ duration: 0.7 }}
+                    />
+                  ))}
+                </div>
+
+                {/* Slide indicators */}
+                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2 z-20">
+                  {images.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setCurrentSlide(index)}
+                      className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                        currentSlide === index 
+                          ? "bg-electric w-8" 
+                          : "bg-white/50 hover:bg-white/80"
+                      }`}
+                      aria-label={`Go to slide ${index + 1}`}
+                    />
+                  ))}
+                </div>
               </motion.div>
 
-              {/* Glow effect behind image */}
+              {/* Glow effect behind slider */}
               <div className="absolute inset-0 -z-10 blur-3xl opacity-20">
                 <div className="absolute inset-0 bg-electric rounded-3xl transform scale-90" />
               </div>

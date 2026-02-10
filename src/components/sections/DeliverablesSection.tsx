@@ -9,28 +9,24 @@ const deliverables = [
     title: "Custom ICP & Market Intelligence",
     description: "We build your AI-powered pipeline and share all outreach sequences and templates used.",
     features: ["Funding round tracking", "Growth signal detection", "Intent scoring", "Market timing analysis"],
-    value: "Worth $5,000+",
   },
   {
     icon: Users,
     title: "Fresh Prospect Database Monthly",
     description: "Net-new decision-makers delivered every month with verified contact data, company intelligence, and readiness-to-buy scoring.",
     features: ["Decision-maker contacts", "Company intelligence", "Buying readiness scores", "Contact verification"],
-    value: "Worth $3,000+",
   },
   {
     icon: MessageSquare,
     title: "AI-Powered Outreach Campaigns",
     description: "Personalized email and LinkedIn sequences that reference specific company details, recent news, and relevant pain points.",
     features: ["Multi-channel sequences", "Personalization at scale", "A/B testing", "Response optimization"],
-    value: "Worth $4,000+",
   },
   {
     icon: Calendar,
     title: "Qualified Demo Bookings",
     description: "You regain your time while we deliver a steady flow of qualified demos.",
     features: ["Budget qualification", "Authority verification", "Interest validation", "Calendar integration"],
-    value: "Priceless",
     highlight: true,
   },
   {
@@ -38,14 +34,12 @@ const deliverables = [
     title: "Performance Analytics & Insights",
     description: "Weekly performance reports with actionable insights, optimization recommendations, and clear ROI tracking.",
     features: ["Weekly reporting", "ROI tracking", "Optimization insights", "Performance metrics"],
-    value: "Worth $2,000+",
   },
   {
     icon: BookOpen,
     title: "90-Day Optimization Playbook",
     description: "Comprehensive strategy document with proven tactics, optimization guidelines, and scaling recommendations for your agency.",
     features: ["Strategy documentation", "Optimization tactics", "Scaling guidelines", "Best practices"],
-    value: "Worth $3,000+",
   },
 ];
 
@@ -111,14 +105,11 @@ const DeliverablesSection = () => {
                 </div>
               )}
               
-              {/* Icon & Value */}
+              {/* Icon */}
               <div className="flex items-start justify-between mb-6">
                 <div className="w-14 h-14 rounded-xl bg-electric/10 border border-electric/20 flex items-center justify-center group-hover:bg-electric/20 transition-colors duration-300">
                   <item.icon className="w-6 h-6 text-electric" />
                 </div>
-                <span className="text-xs font-medium text-electric bg-electric/10 px-2 py-1 rounded-md">
-                  {item.value}
-                </span>
               </div>
               
               {/* Content */}
@@ -151,10 +142,7 @@ const DeliverablesSection = () => {
           className="text-center mt-16"
         >
           <div className="max-w-2xl mx-auto p-8 rounded-2xl bg-electric/5 border border-electric/20">
-            <h4 className="text-xl font-bold text-foreground mb-3">
-              Total Value: $17,000+ per month
-            </h4>
-            <p className="text-muted-foreground mb-6">
+            <p className="text-lg text-muted-foreground mb-6">
               Everything included in one transparent monthly fee—no setup costs, no hidden charges.
             </p>
             <a href="/book-call" className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold bg-electric text-white rounded-2xl hover:bg-electric-hover hover:text-white hover:shadow-lg transition-all duration-300 border-2 border-transparent hover:border-white/20">
